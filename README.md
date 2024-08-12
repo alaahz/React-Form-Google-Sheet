@@ -1,70 +1,81 @@
-# Getting Started with Create React App
+# React Form & Google Sheet
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a React application that demonstrates a form built using Formik and Yup for validation. The form collects user data such as full name, phone number, email, job title, and city. The data is then submitted to a Google Sheets document via the Sheet Best API, allowing for easy data management and storage.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Introduction](#introduction)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Features](#features)
+- [Dependencies](#dependencies)
+- [Configuration](#configuration)
 
-### `npm start`
+## Introduction
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This React application provides a simple and effective form that validates user inputs using Formik and Yup. The form data is submitted to a Google Sheets document using the Sheet Best API, making it a practical solution for collecting and storing user data. The form includes fields for full name, phone number, email, job title, and city, with validation rules to ensure proper input.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installation
 
-### `npm test`
+To set up this project locally, follow these steps:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. **Clone the repository**:
+    ```bash
+    git clone https://github.com/your-username/formik-form-submission.git
+    cd formik-form-submission
+    ```
 
-### `npm run build`
+2. **Install dependencies**:
+    Make sure you have Node.js installed. Then, run the following command to install all necessary dependencies:
+    ```bash
+    npm install
+    ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. **Create a `.env` file**:
+    Create a `.env` file in the root directory of the project and add your Sheet Best API endpoint:
+    ```
+    SHEET_API_KEY=your_sheet_best_api_key
+    ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. **Start the development server**:
+    Run the following command to start the development server:
+    ```bash
+    npm start
+    ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    The application will be available at `http://localhost:3000`.
 
-### `npm run eject`
+## Usage
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. **Fill out the form**:
+    - Enter your full name, phone number, email, job title, and city.
+    - Click the "Submit" button to send the data to the Google Sheets document via the Sheet Best API.
+    - If the submission is successful, the form will reset. Otherwise, errors will be displayed under the respective fields.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. **Form Validation**:
+    - The form uses Yup for validation to ensure all fields are correctly filled out before submission.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. **Loading Indicator**:
+    - A spinner is displayed while the form is being submitted to provide visual feedback to the user.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Features
 
-## Learn More
+- **Formik for Form Management**: Manages the form state and handles submissions.
+- **Yup for Validation**: Validates user input, ensuring that only correct data is submitted.
+- **Axios for HTTP Requests**: Submits form data to a Google Sheets document via the Sheet Best API.
+- **Responsive Design**: The form is designed to be responsive and works well on both desktop and mobile devices.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Dependencies
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+This project uses the following dependencies:
 
-### Code Splitting
+- **React**: A JavaScript library for building user interfaces.
+- **Formik**: A library for managing form state in React.
+- **Yup**: A JavaScript schema builder for value parsing and validation.
+- **Axios**: A promise-based HTTP client for making requests.
+- **React Bootstrap**: Provides Bootstrap components as React components.
+- **Sheet Best API**: A service that allows you to easily send data to Google Sheets via a RESTful API.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Configuration
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+To configure the application, ensure you have a valid Sheet Best API key. This key should be stored in a `.env` file as described in the [Installation](#installation) section.
